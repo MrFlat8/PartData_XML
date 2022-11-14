@@ -86,6 +86,10 @@ namespace PartData_XML
 
             m_cbo_customer.Items.AddRange(LoadCustomers());
             m_cbo_customer.SelectedIndex = 0;
+            m_tb_PartNumber.Focus();
+            
+            if (!HasCustomers)
+                m_buttClose.Focus();
             
             DateTime expireDate = new(2023, 1, 1);
             DateTime currentDate = DateTime.Now;

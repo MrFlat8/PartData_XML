@@ -76,10 +76,12 @@
             // 
             // m_tb_search
             // 
+            this.m_tb_search.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.m_tb_search.Location = new System.Drawing.Point(89, 9);
+            this.m_tb_search.MaxLength = 30;
             this.m_tb_search.Name = "m_tb_search";
             this.m_tb_search.Size = new System.Drawing.Size(164, 23);
-            this.m_tb_search.TabIndex = 3;
+            this.m_tb_search.TabIndex = 1;
             this.m_tb_search.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ev_search_KeyUp);
             // 
             // TMP_pn
@@ -113,7 +115,7 @@
             this.m_tb_partName.Location = new System.Drawing.Point(16, 53);
             this.m_tb_partName.Name = "m_tb_partName";
             this.m_tb_partName.Size = new System.Drawing.Size(451, 16);
-            this.m_tb_partName.TabIndex = 8;
+            this.m_tb_partName.TabIndex = 7;
             this.m_tb_partName.Text = "Part Name";
             // 
             // m_tb_itemNumber
@@ -124,7 +126,7 @@
             this.m_tb_itemNumber.Location = new System.Drawing.Point(16, 25);
             this.m_tb_itemNumber.Name = "m_tb_itemNumber";
             this.m_tb_itemNumber.Size = new System.Drawing.Size(245, 16);
-            this.m_tb_itemNumber.TabIndex = 7;
+            this.m_tb_itemNumber.TabIndex = 4;
             this.m_tb_itemNumber.Text = "Item Number";
             // 
             // m_tb_partSize
@@ -134,7 +136,7 @@
             this.m_tb_partSize.Location = new System.Drawing.Point(272, 25);
             this.m_tb_partSize.Name = "m_tb_partSize";
             this.m_tb_partSize.Size = new System.Drawing.Size(136, 16);
-            this.m_tb_partSize.TabIndex = 6;
+            this.m_tb_partSize.TabIndex = 5;
             this.m_tb_partSize.Text = "Part Size";
             this.m_tb_partSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -145,7 +147,7 @@
             this.m_tb_docNumber.Location = new System.Drawing.Point(483, 53);
             this.m_tb_docNumber.Name = "m_tb_docNumber";
             this.m_tb_docNumber.Size = new System.Drawing.Size(86, 16);
-            this.m_tb_docNumber.TabIndex = 5;
+            this.m_tb_docNumber.TabIndex = 8;
             this.m_tb_docNumber.Text = "DOC#";
             this.m_tb_docNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -156,7 +158,7 @@
             this.m_tb_designation.Location = new System.Drawing.Point(433, 25);
             this.m_tb_designation.Name = "m_tb_designation";
             this.m_tb_designation.Size = new System.Drawing.Size(136, 16);
-            this.m_tb_designation.TabIndex = 4;
+            this.m_tb_designation.TabIndex = 6;
             this.m_tb_designation.Text = "Designation";
             this.m_tb_designation.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -165,7 +167,7 @@
             this.m_buttClose.Location = new System.Drawing.Point(524, 457);
             this.m_buttClose.Name = "m_buttClose";
             this.m_buttClose.Size = new System.Drawing.Size(75, 23);
-            this.m_buttClose.TabIndex = 7;
+            this.m_buttClose.TabIndex = 15;
             this.m_buttClose.Text = "Close";
             this.m_buttClose.UseVisualStyleBackColor = true;
             this.m_buttClose.Click += new System.EventHandler(this.ev_CloseWindow);
@@ -173,11 +175,12 @@
             // m_butt_genLabel
             // 
             this.m_butt_genLabel.Enabled = false;
-            this.m_butt_genLabel.Location = new System.Drawing.Point(385, 457);
+            this.m_butt_genLabel.Location = new System.Drawing.Point(417, 457);
             this.m_butt_genLabel.Name = "m_butt_genLabel";
-            this.m_butt_genLabel.Size = new System.Drawing.Size(133, 23);
+            this.m_butt_genLabel.Size = new System.Drawing.Size(101, 23);
             this.m_butt_genLabel.TabIndex = 8;
-            this.m_butt_genLabel.Text = "Generate CAD Labels";
+            this.m_butt_genLabel.TabStop = false;
+            this.m_butt_genLabel.Text = "Generate Labels";
             this.m_butt_genLabel.UseVisualStyleBackColor = true;
             this.m_butt_genLabel.Click += new System.EventHandler(this.ev_GenerateLabels);
             // 
@@ -207,7 +210,7 @@
             this.m_tb_partProcess.Location = new System.Drawing.Point(16, 51);
             this.m_tb_partProcess.Name = "m_tb_partProcess";
             this.m_tb_partProcess.Size = new System.Drawing.Size(553, 16);
-            this.m_tb_partProcess.TabIndex = 15;
+            this.m_tb_partProcess.TabIndex = 11;
             this.m_tb_partProcess.Text = "Part Processes";
             // 
             // m_tb_partQty
@@ -229,7 +232,7 @@
             this.m_tb_originDesign.Location = new System.Drawing.Point(247, 25);
             this.m_tb_originDesign.Name = "m_tb_originDesign";
             this.m_tb_originDesign.Size = new System.Drawing.Size(322, 16);
-            this.m_tb_originDesign.TabIndex = 9;
+            this.m_tb_originDesign.TabIndex = 10;
             this.m_tb_originDesign.Text = "Origin Design";
             this.m_tb_originDesign.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -277,7 +280,7 @@
             this.m_lb_famliyMembers.Location = new System.Drawing.Point(16, 95);
             this.m_lb_famliyMembers.Name = "m_lb_famliyMembers";
             this.m_lb_famliyMembers.Size = new System.Drawing.Size(245, 197);
-            this.m_lb_famliyMembers.TabIndex = 11;
+            this.m_lb_famliyMembers.TabIndex = 12;
             // 
             // TMP_prodNote
             // 
@@ -313,10 +316,10 @@
             this.m_cbo_customer.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.m_cbo_customer.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.m_cbo_customer.FormattingEnabled = true;
-            this.m_cbo_customer.Location = new System.Drawing.Point(307, 9);
+            this.m_cbo_customer.Location = new System.Drawing.Point(258, 9);
             this.m_cbo_customer.Name = "m_cbo_customer";
             this.m_cbo_customer.Size = new System.Drawing.Size(182, 23);
-            this.m_cbo_customer.TabIndex = 11;
+            this.m_cbo_customer.TabIndex = 2;
             // 
             // m_tb_errorMessage
             // 
@@ -325,9 +328,10 @@
             this.m_tb_errorMessage.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.m_tb_errorMessage.ForeColor = System.Drawing.Color.Maroon;
             this.m_tb_errorMessage.Location = new System.Drawing.Point(15, 38);
+            this.m_tb_errorMessage.MaxLength = 300;
             this.m_tb_errorMessage.Name = "m_tb_errorMessage";
             this.m_tb_errorMessage.Size = new System.Drawing.Size(579, 16);
-            this.m_tb_errorMessage.TabIndex = 16;
+            this.m_tb_errorMessage.TabIndex = 5;
             this.m_tb_errorMessage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // m_butt_openLocations
@@ -336,17 +340,18 @@
             this.m_butt_openLocations.Location = new System.Drawing.Point(495, 8);
             this.m_butt_openLocations.Name = "m_butt_openLocations";
             this.m_butt_openLocations.Size = new System.Drawing.Size(102, 25);
-            this.m_butt_openLocations.TabIndex = 17;
+            this.m_butt_openLocations.TabIndex = 4;
+            this.m_butt_openLocations.TabStop = false;
             this.m_butt_openLocations.Text = "Open Location";
             this.m_butt_openLocations.UseVisualStyleBackColor = true;
             this.m_butt_openLocations.Click += new System.EventHandler(this.ev_OpenLocation);
             // 
             // m_butt_Search
             // 
-            this.m_butt_Search.Location = new System.Drawing.Point(261, 8);
+            this.m_butt_Search.Location = new System.Drawing.Point(444, 8);
             this.m_butt_Search.Name = "m_butt_Search";
             this.m_butt_Search.Size = new System.Drawing.Size(38, 25);
-            this.m_butt_Search.TabIndex = 18;
+            this.m_butt_Search.TabIndex = 3;
             this.m_butt_Search.Text = "Go";
             this.m_butt_Search.UseVisualStyleBackColor = true;
             this.m_butt_Search.Click += new System.EventHandler(this.ev_GoSearchButton);
@@ -356,7 +361,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.m_buttClose;
-            this.ClientSize = new System.Drawing.Size(609, 489);
+            this.ClientSize = new System.Drawing.Size(609, 491);
             this.Controls.Add(this.m_butt_Search);
             this.Controls.Add(this.m_butt_openLocations);
             this.Controls.Add(this.m_tb_errorMessage);
