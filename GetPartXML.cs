@@ -85,11 +85,19 @@ namespace PartData_XML
             InitializeComponent();
 
             m_cbo_customer.Items.AddRange(LoadCustomers());
-            m_cbo_customer.SelectedIndex = 0;
-            m_tb_PartNumber.Focus();
             
-            if (!HasCustomers)
-                m_buttClose.Focus();
+            if (HasCustomers)
+            {
+                m_tb_search.Focus();
+                m_cbo_customer.SelectedIndex = 0;
+            }
+            else
+            {
+                m_butt_Close.Focus();
+                m_tb_search.Enabled = false;
+                m_cbo_customer.Enabled = false;
+                m_butt_search.Enabled = false;
+            }
             
             DateTime expireDate = new(2023, 1, 1);
             DateTime currentDate = DateTime.Now;
@@ -98,7 +106,7 @@ namespace PartData_XML
                 // Force User to Update and trigger review for
                 // Possible Dev Updates that can/should be made
                 m_tb_search.Enabled = false;
-                m_butt_Search.Enabled = false;
+                m_butt_search.Enabled = false;
                 m_butt_genLabel.Enabled = false;
                 m_tb_errorMessage.Text = "Please Update this Application";
             }
@@ -107,19 +115,19 @@ namespace PartData_XML
 
 
 
-        private object[] LoadCustomers()
+        private string[] LoadCustomers()
         {
             DirectoryInfo dir = new(m_basePath);
             if (!dir.Exists)
             {
                 // Stop all actions, no connection was found
                 m_tb_errorMessage.Text = "No Customers Were Found";
-                m_tb_PartNumber.Enabled = false;
-                return Array.Empty<object>();
+                m_tb_search.Enabled = false;
+                return Array.Empty<string>();
             }
 
             DirectoryInfo[] subDir = dir.GetDirectories();
-            object[] customers = new object[subDir.Length];
+            string[] customers = new string[subDir.Length];
 
             for (int i = 0; i < subDir.Length; i++)
                 customers[i] = subDir[i].Name;
@@ -324,7 +332,6 @@ namespace PartData_XML
 
             LaunchSearch();
         }
-
 
         private void ev_OpenLocation(object sender, EventArgs e)
         {
