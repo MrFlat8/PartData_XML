@@ -70,8 +70,8 @@ namespace PartData_XML
         // base path pointing to the starting part structure
         private const string m_basePath = "\\\\spi\\art\\PROTOTYPE\\";
         // path that existing label program looks at
-        private const string m_labelPath = "D:\\TEMP\\";
-        //private const string m_labelPath = "\\\\spi\\art\\PROTOTYPE\\AutoCAD_XML\\";
+        //private const string m_labelPath = "D:\\TEMP\\";
+        private const string m_labelPath = "\\\\spi\\art\\PROTOTYPE\\AutoCAD_XML\\";
         // If no customers are loaded, this program cant be used
         // also might mean that the server is not reachable
         private bool HasCustomers = false;
@@ -312,6 +312,7 @@ namespace PartData_XML
             fileContents = Regex.Replace(fileContents, $"-{designations[0].Value}", $"-{designations[1].Value}");
             File.WriteAllText($"{filePath}-{designations[1].Value}.xml", fileContents);
 
+            m_tb_errorMessage.Text = "Labels Made";
         }
 
 
